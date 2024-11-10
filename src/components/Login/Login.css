@@ -1,0 +1,147 @@
+/* Define o fundo da página em um tom de azul específico */
+body {
+    background-color: #3025af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilização da área de login */
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+  }
+  
+  /* Estilização dos botões */
+  .buttonAccess {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .buttonAccess button {
+    background-color: #3025af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonAccess button:hover {
+    background-color: #5A9BD4;
+  }
+  
+  /* Estilização dos formulários de login para Aluno, Professor e Coordenação */
+  .form {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .form.active {
+    display: flex;
+  }
+  
+  .form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form input:focus {
+    border-color: #3025af;
+  }
+  
+  .form button {
+    background-color: #3025af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .form button:hover {
+    background-color: #5A9BD4;
+  }
+  
+  .form button:focus {
+    outline: none;
+  }
+
+  /* Estilização dos formulários de login para Aluno, Professor e Coordenação */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  form h1 {
+    font-size: 24px;
+    color: #3025af;
+  }
+  
+  .usuario, .senha {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input:focus {
+    border-color: #3025af;
+  }
+  
+  button {
+    background-color: #3025af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #5A9BD4;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
