@@ -11,7 +11,7 @@ body {
   
   /* Estilização da área de login */
   .container {
-    background-color: white;
+    background-color: rgb(209, 208, 208);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -145,3 +145,14 @@ form {
     max-width: 100%;
     height: auto;
   }
+
+  .register-link {
+    color: #3025af;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
