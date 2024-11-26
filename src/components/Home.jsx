@@ -17,19 +17,19 @@ const Home = () => {
             <h1>Bem-vindo(a) à InforCampus</h1>
             <div className="menu">
                 <button onClick={() => handleNavigation('/calendario')}>
-                    <img src="/InforCampus/calendario.png" alt="Calendário" />
+                    <img src="%PUBLIC_URL%/InforCampus/images/calendario.png" alt="Calendário" />
                     Calendário
                 </button>
                 <button onClick={() => handleNavigation('/forum')}>
-                    <img src="/InforCampus/forum.png" alt="Fórum" />
+                    <img src="%PUBLIC_URL%/InforCampus/images/forum.png" alt="Fórum" />
                     Fórum
                 </button>
                 <button onClick={() => handleNavigation('/perfil')}>
-                    <img src="/InforCampus/perfil.png" alt="Perfil" />
+                    <img src="%PUBLIC_URL%/InforCampus/images/perfil.png" />
                     Perfil
                 </button>
                 <button onClick={() => handleNavigation('/notificacoes')}>
-                    <img src="/InforCampus/notificacoes.png" alt="Notificações" />
+                    <img src="%PUBLIC_URL%/InforCampus/images/notificacoes.png" alt="Notificações" />
                     Notificações
                 </button>
             </div>
