@@ -1,6 +1,6 @@
 /* Define o fundo da página em um tom de azul específico */
 body {
-    background-color: #3025af;
+    background-color: #5525af;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
   }
   
   .buttonAccess button {
-    background-color: #3025af;
+    background-color: #5525af;
     color: white;
     border: none;
     border-radius: 5px;
@@ -63,11 +63,11 @@ body {
   }
   
   .form input:focus {
-    border-color: #3025af;
+    border-color: #5525af;
   }
   
   .form button {
-    background-color: #3025af;
+    background-color: #5525af;
     color: white;
     border: none;
     border-radius: 5px;
@@ -95,7 +95,7 @@ form {
   
   form h1 {
     font-size: 24px;
-    color: #3025af;
+    color: #5525af;
   }
   
   .usuario, .senha {
@@ -119,11 +119,11 @@ form {
   }
   
   input:focus {
-    border-color: #3025af;
+    border-color: #5525af;
   }
   
   button {
-    background-color: #3025af;
+    background-color: #5525af;
     color: white;
     border: none;
     border-radius: 5px;
@@ -147,7 +147,7 @@ form {
   }
 
   .register-link {
-    color: #3025af;
+    color: #5525af;
     cursor: pointer;
     margin-top: 10px;
     font-size: 14px;
