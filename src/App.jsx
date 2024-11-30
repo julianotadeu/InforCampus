@@ -14,12 +14,14 @@ export default App*/
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './components/Login/Login';
-import Home from './components/Home';
-import Calendario from './components/Calendario';
-import Forum from './components/Forum';
-import Perfil from './components/Perfil';
-import Notificacoes from './components/Notificacoes';
+import Login from './pages/Login';
+import Home from './pages/Home';
+import Calendario from './pages/Calendario';
+import Forum from './pages/Forum';
+import Perfil from './pages/Perfil';
+import Notificacoes from './pages/Notificacoes';
+import Header from './components/Header'
+import Modal from './components/Modal'
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/notificacoes" element={<Notificacoes />} />
+        <Route path="/header" element={<Header />} />
+        <Route path="/modal" element={<Modal />} />
       </Routes>
     </Router>
   );
