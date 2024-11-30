@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import "../styles/pages/Forum.css"
 
 function Forum() {
   return (
