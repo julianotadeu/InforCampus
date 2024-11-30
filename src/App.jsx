@@ -14,14 +14,14 @@ export default App*/
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import Calendario from './pages/Calendario';
-import Forum from './pages/Forum';
-import Perfil from './pages/Perfil';
-import Notificacoes from './pages/Notificacoes';
-import Header from './components/Header'
-import Modal from './components/Modal'
+import Login from './pages/Login.jsx';
+import Home from './pages/Home.jsx';
+import Calendario from './pages/Calendario.jsx';
+import Forum from './pages/Forum.jsx';
+import Perfil from './pages/Perfil.jsx';
+import Notificacoes from './pages/Notificacoes.jsx';
+import Header from './components/Header.jsx'
+import Modal from './components/Modal.jsx'
 
 const App = () => {
   return (

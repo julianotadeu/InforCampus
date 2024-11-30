@@ -1,12 +1,21 @@
-import React from 'react';
+import React from "react";
+import Header from "../components/Header";
+import "../styles/pages/Notificacoes.css"
 
-const Notificacoes = () => {
+function Notificacoes() {
   return (
     <div>
-      <h1>Notificações</h1>
-      <p>Placeholder para as notificações do usuário.</p>
+      <Header active="notifications" />
+      <div className="page-content">
+        <h1>Notificações</h1>
+        <ul>
+          <li>📢 Aula de Matemática foi reagendada para amanhã às 10h.</li>
+          <li>📢 Não haverá aula de Química na próxima segunda-feira.</li>
+          <li>📢 Fórum aberto: "Dúvidas sobre o Trabalho Final".</li>
+        </ul>
+      </div>
     </div>
   );
-};
+}
 
 export default Notificacoes;

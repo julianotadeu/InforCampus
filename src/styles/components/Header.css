@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .header-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .header-item.active {
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  .logout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  

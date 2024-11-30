@@ -1,0 +1,45 @@
+/* CalendarPage.css */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .calendar {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .event-day {
+    color: red;
+    font-size: 1.5rem;
+  }
+  
+  .event-details {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .event-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  .event-details p {
+    font-size: 1.1rem;
+  }
+  

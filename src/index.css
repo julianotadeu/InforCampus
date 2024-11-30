@@ -1,0 +1,34 @@
+.page-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .page-content h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .page-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-content li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-content li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .forum-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  

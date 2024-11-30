@@ -265,7 +265,7 @@ export default Login;*/
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import '../styles/pages/Login.css';
 
 const Login = () => {
     const [selectedRole, setSelectedRole] = useState(null);
