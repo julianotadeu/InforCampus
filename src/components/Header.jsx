@@ -21,7 +21,7 @@ function Header({ active }) {
   // Função para confirmar o logout e redirecionar para a página de login
   const handleConfirmLogout = () => {
     setIsModalOpen(false);
-    navigate("/login");  // Redireciona para a página de login
+    navigate("/");  // Redireciona para a página de login
   };
 
   return (
