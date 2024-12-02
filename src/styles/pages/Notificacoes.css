@@ -1,4 +1,14 @@
 /* Estilos Gerais da Página */
+body {
+  background-color: #5525af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .page-content {
     padding: 20px;
     max-width: 800px;

@@ -253,11 +253,11 @@ const Login = () => {
                         <input type="password" placeholder='Senha' />
                     </div>
                     <button type="button" onClick={handleLogin}>Entrar</button>  {/* Botão Entrar adicionado */
-                    /*<button type="button" onClick={handleBack}>Voltar</button>
-                </form>
-            )}
-        </div>
-    );
+/*<button type="button" onClick={handleBack}>Voltar</button>
+</form>
+)}
+</div>
+);
 };
 
 export default Login;*/
@@ -308,6 +308,9 @@ const Login = () => {
         setConfirmPasswordVisible(!confirmPasswordVisible);
     };
 
+    const [cpf, setCpf] = useState("");
+    const [cpfError, setCpfError] = useState("");
+
     return (
         <div className="container">
             {!selectedRole && (
@@ -325,6 +328,7 @@ const Login = () => {
 
             {isRegistering && (
                 <form>
+                    <button type="button" onClick={handleBack}>Voltar</button>
                     <h1>Cadastro</h1>
                     <div className="usuario">
                         <label>Tipo de Usuário</label>
@@ -339,11 +343,33 @@ const Login = () => {
                         <>
                             <div className="usuario">
                                 <label>Nome Completo</label>
-                                <input type="text" placeholder="Nome Completo" required />
+                                <input
+                                    type="text"
+                                    placeholder="Nome Completo"
+                                    required
+                                    minLength={5}
+                                />
                             </div>
                             <div className="usuario">
                                 <label>CPF</label>
-                                <input type="text" placeholder="CPF" required />
+                                <input
+                                    type="text"
+                                    placeholder="CPF"
+                                    value={cpf}
+                                    maxLength={11} // Limita o CPF a 11 números
+                                    onInput={(e) => {
+                                        const onlyNumbers = e.target.value.replace(/\D/g, ''); // Permite apenas números
+                                        setCpf(onlyNumbers);
+                                        setCpfError(""); // Limpa o erro ao corrigir
+                                    }}
+                                    onBlur={() => {
+                                        if (cpf.length < 10) {
+                                            setCpfError("O CPF deve ter no mínimo 10 números.");
+                                        }
+                                    }}
+                                    required
+                                />
+                                {cpfError && <p style={{ color: "red", fontSize: "12px" }}>{cpfError}</p>}
                             </div>
                             <div className="usuario">
                                 <label>Email</label>
@@ -357,9 +383,22 @@ const Login = () => {
                                 <label>Senha</label>
                                 <input type={passwordVisible ? "text" : "password"} placeholder="Senha" required />
                             </div>
+                            <div className="checkbox">
+                                <label>
+                                    <input type="checkbox" onChange={togglePasswordVisibility} />
+                                    Mostrar Senha
+                                </label>
+                            </div>
                             <div className="senha">
                                 <label>Confirme a Senha</label>
                                 <input type={confirmPasswordVisible ? "text" : "password"} placeholder="Confirme a Senha" required />
+                            </div>
+                            <div className="checkbox">
+                                <label>
+                                    <input type="checkbox" onChange={toggleConfirmPasswordVisibility} />
+                                    Mostrar Confirmação de Senha
+                                </label>
+                                <button type="submit">Cadastrar</button>
                             </div>
                         </>
                     )}
@@ -374,28 +413,26 @@ const Login = () => {
                                 <label>Senha</label>
                                 <input type={passwordVisible ? "text" : "password"} placeholder="Senha" required />
                             </div>
+                            <div className="checkbox">
+                                <label>
+                                    <input type="checkbox" onChange={togglePasswordVisibility} />
+                                    Mostrar Senha
+                                </label>
+                            </div>
                             <div className="senha">
                                 <label>Confirme a Senha</label>
                                 <input type={confirmPasswordVisible ? "text" : "password"} placeholder="Confirme a Senha" required />
                             </div>
+                            <div className="checkbox">
+                                <label>
+                                    <input type="checkbox" onChange={toggleConfirmPasswordVisibility} />
+                                    Mostrar Confirmação de Senha
+                                </label>
+                                <button type="submit">Cadastrar</button>
+                            </div>
                         </>
                     )}
 
-                    <div className="checkbox">
-                        <label>
-                            <input type="checkbox" onChange={togglePasswordVisibility} />
-                            Mostrar Senha
-                        </label>
-                    </div>
-                    <div className="checkbox">
-                        <label>
-                            <input type="checkbox" onChange={toggleConfirmPasswordVisibility} />
-                            Mostrar Confirmação de Senha
-                        </label>
-                    </div>
-
-                    <button type="submit">Cadastrar</button>
-                    <button type="button" onClick={handleBack}>Voltar</button>
                 </form>
             )}
 

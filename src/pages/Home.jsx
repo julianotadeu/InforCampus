@@ -1,18 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/pages/Home.css';
 import { useNavigate } from 'react-router-dom';
+import Modal from '../components/Modal'
 
 const Home = () => {
     const navigate = useNavigate();  // Hook para navegação
+    const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal
 
+    // Função para navegação entre páginas
     const handleNavigation = (path) => {
-        navigate(path);  // Função de navegação
+        navigate(path);
+    };
+
+    // Função que abre o modal
+    const handleLogoutClick = () => {
+        setIsModalOpen(true);
+    };
+
+    // Função para fechar o modal
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
+    // Função para confirmar o logout e redirecionar para a página de login
+    const handleConfirmLogout = () => {
+        setIsModalOpen(false);
+        navigate("/");  // Redireciona para a página de login
     };
 
     return (
         <div className="home-container">
-            {/* Botão de Sair que redireciona para a tela de login */}
-            <button onClick={() => navigate('/')}>Sair</button>  
+            <div>
+                <button className="menu" onClick={handleLogoutClick}>Sair</button>
+                {/* Modal de confirmação */}
+                {isModalOpen && (
+                    <Modal onClose={closeModal} onConfirm={handleConfirmLogout} />
+                )}
+            </div>
 
             <h1>Bem-vindo(a) à InforCampus</h1>
             <div className="menu">
@@ -25,7 +49,7 @@ const Home = () => {
                     Fórum
                 </button>
                 <button onClick={() => handleNavigation('/perfil')}>
-                    <img src="/InforCampus/perfil.png" alt='Icone do Perfil' />
+                    <img src="/InforCampus/perfil.png" alt="Icone do Perfil" />
                     Perfil
                 </button>
                 <button onClick={() => handleNavigation('/notificacoes')}>
