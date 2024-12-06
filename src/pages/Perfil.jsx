@@ -35,7 +35,7 @@ function Profile() {
 export default Profile;*/
 
 import React, { useState } from "react";
-import "./Profile.css";
+import "../styles/pages/Perfil.css";
 
 const Profile = ({ userType }) => {
   // Dados de exemplo para o perfil

@@ -214,3 +214,47 @@ form {
     text-decoration: underline;
 }
 
+
+.usuario {
+  justify-content: center;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.senha {
+  text-align: justify;
+}
+
+.checkbox {
+  display: flex; /* Usando flexbox para alinhar os itens na horizontal */
+  flex-direction: row;
+  align-items:start; /* Alinha verticalmente os itens no centro */
+}
+
+.checkbox input[type="checkbox"] {
+  margin: 5; /* Remove a margem padrão do checkbox */
+
+  cursor: pointer;
+}
+
+.checkbox label {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px; /* Ajusta o tamanho da fonte do label */
+  color: #333; /* Define a cor do texto */
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column; /* Organiza os elementos na vertical */
+  align-items:end; /* Alinha os itens à esquerda */
+  margin-right: 162px;
+  margin-bottom: 20px;
+}
+
+button#voltar:hover {
+  background-color: #9d5ad4 !important;
+}
+

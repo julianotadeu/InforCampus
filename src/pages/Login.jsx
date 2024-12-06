@@ -263,6 +263,8 @@ const Login = () => {
 export default Login;*/
 
 
+//Código rodando
+/*
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/pages/Login.css';
@@ -457,6 +459,153 @@ const Login = () => {
                             Mostrar Senha
                         </label>
                     </div>
+                    <button type="button" onClick={handleLogin}>Entrar</button>
+                    <button type="button" onClick={handleBack}>Voltar</button>
+                </form>
+            )}
+        </div>
+    );
+};
+
+export default Login;
+*/
+
+//Testando autenticação
+
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/pages/Login.css';
+
+const Login = () => {
+    const [selectedRole, setSelectedRole] = useState(null);
+    const [isRegistering, setIsRegistering] = useState(false);
+    const [userType, setUserType] = useState('');
+    const [passwordVisible, setPasswordVisible] = useState(false);
+    const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+    const [cpf, setCpf] = useState("");
+    const [cpfError, setCpfError] = useState("");
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
+
+    // Lista de usuários pré-definidos
+    const users = [
+        { role: 'Aluno', email: 'aluno@exemplo.com', password: 'senha123' },
+        { role: 'Professor', email: 'professor@exemplo.com', password: 'senha123' },
+        { role: 'Coordenacao', email: 'coordenacao@exemplo.com', password: 'senha123' },
+    ];
+
+    const handleRoleSelection = (role) => {
+        if (role === 'Aluno'){
+            navigate('/loginAluno')
+        }
+
+        if (role === 'Professor'){
+            navigate('/loginProfessores')
+        }
+
+        if (role === 'Coordenacao'){
+            navigate('/loginCoordenacao')
+        }
+        setSelectedRole(role);
+        setIsRegistering(false);
+    };
+
+    const handleBack = () => {
+        setSelectedRole(null);
+        setIsRegistering(false);
+    };
+
+    const handleRegisterClick = () => {
+        setIsRegistering(true);
+        setSelectedRole('Aluno');
+    };
+
+    const handleUserTypeChange = (event) => {
+        setUserType(event.target.value);
+    };
+
+    const handleLogin = () => {
+        // Verificando se o usuário existe na lista de usuários
+        const user = users.find(user => user.email === email && user.password === password && user.role === selectedRole);
+
+        if (user) {
+            navigate('/home');
+        } else {
+            setErrorMessage('Usuário ou senha incorretos!');
+        }
+    };
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
+    const toggleConfirmPasswordVisibility = () => {
+        setConfirmPasswordVisible(!confirmPasswordVisible);
+    };
+
+    return (
+        <div className="container">
+            {!selectedRole && (
+                <div className="buttonAccess">
+                    <img className="image-container" src="/InforCampus/InfoCampus.png" alt="Logotipo da InforCampus" />
+                    <h1>Área de Acesso</h1>
+                    <button onClick={() => handleRoleSelection('Aluno')}>Aluno</button>
+                    <button onClick={() => handleRoleSelection('Professor')}>Professor</button>
+                    <button onClick={() => handleRoleSelection('Coordenacao')}>Coordenação</button>
+                    <p onClick={handleRegisterClick} className="register-link">
+                        Ainda não tem conta? Cadastre-se
+                    </p>
+                </div>
+            )}
+
+            {isRegistering && (
+                <form>
+                    <button type="button" onClick={handleBack}>Voltar</button>
+                    <h1>Cadastro</h1>
+                    <div className="usuario">
+                        <label>Tipo de Usuário</label>
+                        <select value={userType} onChange={handleUserTypeChange}>
+                            <option value="">Selecione</option>
+                            <option value="Aluno">Aluno</option>
+                            <option value="Professor/Coordenação">Professor/Coordenação</option>
+                        </select>
+                    </div>
+                    {/* Formulário de cadastro (semelhante ao que você já fez) */}
+                </form>
+            )}
+
+            {selectedRole && !isRegistering && (
+                <form>
+                    <h1>Acesso do {selectedRole}</h1>
+                    <div className="usuario">
+                        <label>Usuário</label>
+                        <input
+                            type={selectedRole === 'Aluno' ? "text" : "email"}
+                            placeholder={selectedRole === 'Aluno' ? 'Registro Acadêmico (RA)' : 'E-mail corporativo'}
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                    </div>
+                    <div className="senha">
+                        <label>Senha</label>
+                        <input
+                            type={passwordVisible ? "text" : "password"}
+                            placeholder="Senha"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <div className="checkbox">
+                        <label>
+                            <input type="checkbox" onChange={togglePasswordVisibility} />
+                            Mostrar Senha
+                        </label>
+                    </div>
+                    {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
                     <button type="button" onClick={handleLogin}>Entrar</button>
                     <button type="button" onClick={handleBack}>Voltar</button>
                 </form>

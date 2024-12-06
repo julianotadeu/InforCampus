@@ -1,3 +1,4 @@
+/*
 import React, { useState } from 'react';
 import '../styles/pages/Calendario.css';
 import { useNavigate } from 'react-router-dom';
@@ -58,6 +59,51 @@ const Calendar = () => {
       </div>
     </div>
   );
+};
+
+export default Calendar;
+*/
+
+import React, { useContext, useState } from 'react';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction'; // para eventos clicáveis
+import { EventContext } from '../context/EventContext';
+import { UserContext } from '../context/UserContext';
+
+const Calendar = () => {
+    const { events, addEvent, updateEvent, deleteEvent } = useContext(EventContext);
+    const { userType } = useContext(UserContext);
+    const [selectedEvent, setSelectedEvent] = useState(null);
+
+    const handleDateClick = (info) => {
+        if (userType !== 'Aluno') {
+            const title = prompt('Digite o título do evento:');
+            if (title) addEvent({ title, date: info.dateStr });
+        }
+    };
+
+    const handleEventClick = (info) => {
+        if (userType === 'Coordenação' || userType === 'Professor') {
+            const action = prompt('Digite "editar" para alterar ou "remover" para excluir:');
+            if (action === 'editar') {
+                const newTitle = prompt('Novo título:');
+                if (newTitle) updateEvent(info.event.id, { title: newTitle });
+            } else if (action === 'remover') {
+                deleteEvent(info.event.id);
+            }
+        }
+    };
+
+    return (
+        <FullCalendar
+            plugins={[dayGridPlugin, interactionPlugin]}
+            initialView="dayGridMonth"
+            events={events}
+            dateClick={handleDateClick}
+            eventClick={handleEventClick}
+        />
+    );
 };
 
 export default Calendar;
