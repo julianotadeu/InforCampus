@@ -8,6 +8,63 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
+
+/* Posiciona o botão dentro do formulário */
+form {
+  position: relative; /* Garante que os elementos posicionados dentro usem este contêiner como referência */
+}
+
+/* Contêiner do botão dentro do formulário */
+.back-button-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Estilização do botão de voltar */
+.back-button {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efeito de hover no botão */
+.back-button:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+  transform: scale(1.1);
+}
+
+/* Estilização da imagem dentro do botão */
+.back-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .back-button {
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+  }
+
+  .back-button img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
   
   /* Estilização da área de login */
   .container {
@@ -156,3 +213,4 @@ form {
 .register-link:hover {
     text-decoration: underline;
 }
+

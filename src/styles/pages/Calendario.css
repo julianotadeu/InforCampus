@@ -1,3 +1,4 @@
+
 /* CalendarPage.css */
 /*.calendar-container {
     display: flex;
@@ -8,41 +9,117 @@
   
   .calendar {
     margin-top: 20px;
+
+.calendar-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #5a2d8c; /* Ajuste da cor do fundo para mais parecido com a imagem 
+  color: white;
+}*/
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.calendar-week {
+  display:table-row-group;
+  align-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.calendar-day {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.calendar-day-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #5a2d8c;
+}
+
+.event {
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.event-time {
+  font-size: 12px;
+  color: #555;
+}
+
+.event-title {
+  font-size: 14px;
+  color: #333;
+}
+
+.navigation button {
+  background-color: #ff9c5b;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  background-color: #ff7e2a;
+}
+
+.navigation {
+  display: flex;
+  gap: 10px;
+}
+
+/* Mobile Styling */
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 10px;
     width: 100%;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #fff;
   }
-  
-  h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
+
+  .calendar-header {
+    font-size: 14px;
   }
-  
-  .event-day {
-    color: red;
-    font-size: 1.5rem;
+
+  .calendar-day-header {
+    font-size: 16px;
   }
-  
-  .event-details {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    width: 100%;
-    max-width: 600px;
+
+  .event-time, .event-title {
+    font-size: 12px;
   }
-  
-  .event-details h2 {
-    margin-bottom: 10px;
+
+  .calendar-week {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
   }
   
   .event-details p {
     font-size: 1.1rem;
-  }*/
-
+  
+  }
+}
   /* CalendarPage.css */
 
 /* Container principal do calendário */
@@ -140,5 +217,18 @@
       font-size: 0.95rem; /* Ajusta o tamanho da fonte do parágrafo */
     }
   }
-  
-  
+
+  .calendar-day {
+    margin: 5px;
+    padding: 5px;
+    background-color: transparent;
+  }
+
+  .event {
+    background-color: #c5c5c5;
+    color: white;
+  }
+
+  .event-time, .event-title {
+    color: #fff;
+  }

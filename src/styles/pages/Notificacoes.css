@@ -46,8 +46,8 @@
 /* Para telas menores que 768px */
 @media (max-width: 768px) {
   .notifications-title {
-    font-size: 1.5rem; /* Tamanho do título menor */
-  }
+    font-size: 1.5rem; 
+  }/* Tamanho do título menor */
 
   .notification-box {
     max-width: 100%; /* Remove o limite máximo de largura para preencher a tela */
@@ -55,7 +55,7 @@
   }
 
   .notification-message {
-    font-size: 1rem; /* Ajusta o tamanho da fonte das mensagens */
+    font-size: 1rem;
   }
 }
 
