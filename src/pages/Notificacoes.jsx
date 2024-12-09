@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
 import "../styles/pages/Notificacoes.css"
 
 function Notificacoes() {
   return (
     <div>
-      <Header active="notifications" />
       <div className="page-content">
         <h1>Notificações</h1>
         <ul>

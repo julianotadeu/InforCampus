@@ -37,7 +37,7 @@ export default Profile;*/
 import React, { useState } from "react";
 import "../styles/pages/Perfil.css";
 
-const Profile = ({ userType }) => {
+const Perfil = ({ userType }) => {
   // Dados de exemplo para o perfil
   const [userData, setUserData] = useState({
     name: "João Silva",
@@ -83,4 +83,4 @@ const Profile = ({ userType }) => {
   );
 };
 
-export default Profile;
+export default Perfil;

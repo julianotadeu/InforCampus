@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../components/Header";
 import "../styles/pages/Forum.css"
 
 function Forum() {
   return (
-    <div>
-      <Header active="forum" />
+    <div className="container">
       <div className="page-content">
         <h1>Fórum</h1>
         <div className="forum-section">
