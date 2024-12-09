@@ -1,234 +1,96 @@
-
-/* CalendarPage.css */
-/*.calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .calendar {
-    margin-top: 20px;
-
+/* Estilo do container principal */
 .calendar-container {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #5a2d8c; /* Ajuste da cor do fundo para mais parecido com a imagem 
-  color: white;
-}*/
-
-.calendar-header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.calendar-week {
-  display:table-row-group;
-  align-items: center;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
-}
-
-.calendar-day {
-  text-align: center;
-  background-color: #fff;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #c5c5c5;
+  padding: 20px;
   border-radius: 10px;
-  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.calendar-day-header {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #5a2d8c;
-}
-
-.event {
-  background-color: #f5f5f5;
-  padding: 5px;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-}
-
-.event-time {
-  font-size: 12px;
-  color: #555;
-}
-
-.event-title {
-  font-size: 14px;
+/* Título */
+.calendar-container h1 {
   color: #333;
+  margin-bottom: 20px;
 }
 
-.navigation button {
-  background-color: #ff9c5b;
-  color: white;
+/* Parágrafo para exibir a data */
+.calendar-container p {
+  margin-top: 20px;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Estilo do calendário */
+.react-calendar {
   border: none;
-  padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #666368;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do calendário */
+.react-calendar__navigation {
+  background-color: #965be4;
+  color: rgb(114, 113, 113);
+  padding: 0px;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 10px 10px 0 0;
+}
+
+.react-calendar__navigation button {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border: none;
+  background: none;
   cursor: pointer;
 }
 
-.navigation button:hover {
-  background-color: #ff7e2a;
+.react-calendar__navigation button:disabled {
+  cursor: not-allowed;
+  color: #868484;
 }
 
-.navigation {
-  display: flex;
-  gap: 10px;
+/* Dias da semana */
+.react-calendar__month-view__weekdays {
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #b85bdd;
+  padding: 5px 0;
 }
 
-/* Mobile Styling */
-@media (max-width: 480px) {
-  .calendar-container {
-    padding: 10px;
-    width: 100%;
-  }
-
-  .calendar-header {
-    font-size: 14px;
-  }
-
-  .calendar-day-header {
-    font-size: 16px;
-  }
-
-  .event-time, .event-title {
-    font-size: 12px;
-  }
-
-  .calendar-week {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
-  }
-  
-  .event-details p {
-    font-size: 1.1rem;
-  
-  }
+/* Dias do mês */
+.react-calendar__tile {
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  background-color: #77757c;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
-  /* CalendarPage.css */
 
-/* Container principal do calendário */
-.calendar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  /* Estilo do calendário */
-  .calendar {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 600px; /* Limita o tamanho máximo do calendário */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    background-color: #fff;
-  }
-  
-  /* Título principal da página */
-  h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo do dia com evento */
-  .event-day {
-    color: red;
-    font-size: 1.5rem;
-  }
-  
-  /* Detalhes do evento */
-  .event-details {
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    width: 100%;
-    max-width: 600px; /* Limita o tamanho máximo do conteúdo de evento */
-  }
-  
-  /* Título dos detalhes do evento */
-  .event-details h2 {
-    margin-bottom: 10px;
-  }
-  
-  /* Parágrafo dentro dos detalhes do evento */
-  .event-details p {
-    font-size: 1.1rem;
-  }
-  
-  /* Estilos responsivos para telas pequenas */
-  
-  /* Para telas menores que 768px */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 1.5rem; /* Tamanho do título menor */
-    }
-  
-    .calendar, .event-details {
-      max-width: 100%; /* Remove o limite máximo de largura, para preencher a tela */
-      padding: 15px;
-    }
-  
-    .event-details h2 {
-      font-size: 1.25rem; /* Ajusta o tamanho da fonte */
-    }
-  
-    .event-details p {
-      font-size: 1rem; /* Ajusta o tamanho da fonte do parágrafo */
-    }
-  }
-  
-  /* Para telas menores que 480px (dispositivos muito pequenos) */
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.2rem; /* Tamanho de fonte ainda menor para celulares pequenos */
-    }
-  
-    .calendar {
-      margin-top: 10px; /* Reduz o espaço acima do calendário */
-    }
-  
-    .event-details {
-      padding: 10px; /* Diminui o padding para telas menores */
-    }
-  
-    .event-details h2 {
-      font-size: 1.1rem; /* Ajusta o tamanho da fonte do título */
-    }
-  
-    .event-details p {
-      font-size: 0.95rem; /* Ajusta o tamanho da fonte do parágrafo */
-    }
-  }
+/* Dias do mês ao passar o mouse */
+.react-calendar__tile:hover {
+  background-color: #0078d7;
+  color: rgb(97, 94, 94);
+  border: 1px solid #005bb5;
+}
 
-  .calendar-day {
-    margin: 5px;
-    padding: 5px;
-    background-color: transparent;
-  }
+/* Dias selecionados */
+.react-calendar__tile--active {
+  background-color: #0078d7;
+  color: rgb(248, 235, 48);
+  border: 1px solid #005bb5;
+}
 
-  .event {
-    background-color: #c5c5c5;
-    color: white;
-  }
-
-  .event-time, .event-title {
-    color: #fff;
-  }
+/* Dias fora do mês atual */
+.react-calendar__tile--now {
+  background-color: #fad712;
+  color: #616161;
+}

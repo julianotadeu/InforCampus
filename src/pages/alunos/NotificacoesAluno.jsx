@@ -9,9 +9,8 @@ const NotificacoesAluno = () => {
             <div className="page-content">
                 <h1>Notificações</h1>
                 <ul>
-                    <li>📢 Aula de Matemática foi reagendada para amanhã às 10h.</li>
-                    <li>📢 Não haverá aula de Química na próxima segunda-feira.</li>
-                    <li>📢 Fórum aberto: "Dúvidas sobre o Trabalho Final".</li>
+                    <li>📢 Aula de Modelagem de Sistemas foi reagendada para amanhã às 18:40.</li>
+                    <li>📢 Aula de Banco de Dados do dia 17/12/2024 foi cancelada.</li>
                 </ul>
                 <br />
                 <button className="voltar" onClick={() => window.history.back()}>Voltar</button>
