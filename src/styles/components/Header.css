@@ -1,4 +1,4 @@
-.header {
+/*.header {
     display: flex;
     justify-content: space-between;
     background-color: #333;
@@ -25,5 +25,72 @@
     border: none;
     padding: 10px;
     border-radius: 5px;
-  }
+  }*/
   
+
+  /* Estilos para o Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  flex-wrap: wrap; /* Permite que os itens "quebrem" em telas menores */
+}
+
+/* Itens do Header */
+.header-item {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Itens ativos */
+.header-item.active {
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* Botão de Logout */
+.logout-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Estilo responsivo para telas pequenas */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    padding: 20px;
+  }
+
+  .header-item {
+    padding: 15px;
+    font-size: 18px; /* Ajusta o tamanho da fonte para dispositivos móveis */
+  }
+
+  .logout-button {
+    padding: 15px;
+    font-size: 18px;
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+  }
+}
+
+/* Estilo responsivo para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+  .header-item {
+    font-size: 16px; /* Tamanho de fonte menor para telas muito pequenas */
+    padding: 10px;
+  }
+
+  .logout-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}

@@ -1,3 +1,15 @@
+
+/* CalendarPage.css */
+/*.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .calendar {
+    margin-top: 20px;
+
 .calendar-container {
   width: 100%;
   max-width: 500px;
@@ -6,9 +18,9 @@
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #5a2d8c; /* Ajuste da cor do fundo para mais parecido com a imagem */
+  background-color: #5a2d8c; /* Ajuste da cor do fundo para mais parecido com a imagem 
   color: white;
-}
+}*/
 
 .calendar-header {
   display: flex;
@@ -102,6 +114,109 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 15px;
   }
+  
+  .event-details p {
+    font-size: 1.1rem;
+  
+  }
+}
+  /* CalendarPage.css */
+
+/* Container principal do calendário */
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Estilo do calendário */
+  .calendar {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho máximo do calendário */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  /* Título principal da página */
+  h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo do dia com evento */
+  .event-day {
+    color: red;
+    font-size: 1.5rem;
+  }
+  
+  /* Detalhes do evento */
+  .event-details {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    width: 100%;
+    max-width: 600px; /* Limita o tamanho máximo do conteúdo de evento */
+  }
+  
+  /* Título dos detalhes do evento */
+  .event-details h2 {
+    margin-bottom: 10px;
+  }
+  
+  /* Parágrafo dentro dos detalhes do evento */
+  .event-details p {
+    font-size: 1.1rem;
+  }
+  
+  /* Estilos responsivos para telas pequenas */
+  
+  /* Para telas menores que 768px */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem; /* Tamanho do título menor */
+    }
+  
+    .calendar, .event-details {
+      max-width: 100%; /* Remove o limite máximo de largura, para preencher a tela */
+      padding: 15px;
+    }
+  
+    .event-details h2 {
+      font-size: 1.25rem; /* Ajusta o tamanho da fonte */
+    }
+  
+    .event-details p {
+      font-size: 1rem; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+  }
+  
+  /* Para telas menores que 480px (dispositivos muito pequenos) */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.2rem; /* Tamanho de fonte ainda menor para celulares pequenos */
+    }
+  
+    .calendar {
+      margin-top: 10px; /* Reduz o espaço acima do calendário */
+    }
+  
+    .event-details {
+      padding: 10px; /* Diminui o padding para telas menores */
+    }
+  
+    .event-details h2 {
+      font-size: 1.1rem; /* Ajusta o tamanho da fonte do título */
+    }
+  
+    .event-details p {
+      font-size: 0.95rem; /* Ajusta o tamanho da fonte do parágrafo */
+    }
+  }
 
   .calendar-day {
     margin: 5px;
@@ -117,4 +232,3 @@
   .event-time, .event-title {
     color: #fff;
   }
-}

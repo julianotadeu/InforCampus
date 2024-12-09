@@ -1,97 +1,79 @@
-/* Estilos Gerais da Página */
-body {
-  background-color: #5525af;
+/* Notificações (Notificacoes.css) */
+
+/* Container principal das notificações */
+.notifications-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
-.page-content {
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+/* Estilo para a caixa de notificações */
+.notification-box {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px; /* Limita o tamanho máximo da caixa de notificações */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+/* Título das notificações */
+.notifications-title {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Estilo das mensagens de notificações */
+.notification-message {
+  color: #555;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Estilo das notificações de erro */
+.notification-error {
+  color: red;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Estilos responsivos para telas pequenas */
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .notifications-title {
+    font-size: 1.5rem; 
+  }/* Tamanho do título menor */
+
+  .notification-box {
+    max-width: 100%; /* Remove o limite máximo de largura para preencher a tela */
+    padding: 15px;
   }
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+
+  .notification-message {
+    font-size: 1rem;
   }
-  
-  /* Estilo da Lista de Notificações */
-  ul {
-    list-style-type: none;
-    padding: 0;
+}
+
+/* Para telas menores que 480px (dispositivos muito pequenos) */
+@media (max-width: 480px) {
+  .notifications-title {
+    font-size: 1.2rem; /* Tamanho de fonte ainda menor para celulares pequenos */
   }
-  
-  ul li {
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    padding: 12px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, background-color 0.3s;
+
+  .notification-box {
+    margin-top: 10px; /* Reduz o espaço acima das notificações */
   }
-  
-  ul li:hover {
-    background-color: #f4f4f4;
-    transform: scale(1.02);
+
+  .notification-message {
+    font-size: 0.95rem; /* Ajusta o tamanho da fonte das mensagens */
   }
-  
-  /* Ícone de Notificação */
-  ul li::before {
-    content: '📢';
-    margin-right: 15px;
-    font-size: 1.4rem;
-    color: #ff6347; /* Cor para o ícone */
+
+  .notification-error {
+    font-size: 1rem; /* Ajusta o tamanho da fonte de erro */
   }
-  
-  /* Estilo para a Cabeça do Header */
-  .header {
-    background-color: #007bff;
-    padding: 10px 20px;
-    text-align: center;
-    color: white;
-    font-size: 1.5rem;
-  }
-  
-  .header-item {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: 500;
-  }
-  
-  .header-item:hover {
-    text-decoration: underline;
-  }
-  
-  /* Responsividade para dispositivos móveis */
-  @media (max-width: 768px) {
-    .page-content {
-      padding: 15px;
-      margin-top: 20px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    ul li {
-      font-size: 1rem;
-    }
-  }
-  
+}
