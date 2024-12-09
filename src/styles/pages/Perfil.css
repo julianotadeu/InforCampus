@@ -1,113 +1,96 @@
 /* Estilos Gerais da Página */
 .profile-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título da Página */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+/* Detalhes do Perfil */
+.profile-details {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 30px;
+}
+
+/* Foto do Perfil */
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+/* Informações do Perfil */
+.profile-info {
+  flex-grow: 1;
+  text-align: left; /* Garante o alinhamento à esquerda */
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.profile-info strong {
+  font-weight: 600;
+}
+
+/* Botão Voltar */
+.back-button-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .profile-details {
+    flex-direction: column;
+    align-items: flex-start; /* Mantém alinhado à esquerda em telas menores */
   }
-  
-  h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
   }
-  
-  /* Container para a Foto de Perfil e Detalhes */
-  .profile-info {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  
-  .profile-picture {
-    flex-shrink: 0;
-  }
-  
-  .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #007bff;
-  }
-  
-  .profile-details h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .profile-details p {
-    font-size: 1.1rem;
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  .profile-details strong {
-    font-weight: 600;
-  }
-  
-  /* Ações do Perfil (Botões) */
-  .profile-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .edit-button, .logout-button {
-    padding: 10px 20px;
+
+  .profile-info p {
     font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
   }
-  
-  .edit-button {
-    background-color: #007bff;
-    color: white;
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  .edit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .logout-button {
-    background-color: #ff6347;
-    color: white;
-  }
-  
-  .logout-button:hover {
-    background-color: #d9534f;
-  }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .profile-info {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .profile-img {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .profile-details h2 {
-      font-size: 1.2rem;
-    }
-  
-    .profile-details p {
-      font-size: 1rem;
-    }
-  
-    .edit-button, .logout-button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
-    }
-  }
-  
+}

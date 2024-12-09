@@ -20,6 +20,7 @@ import Calendario from './pages/Calendario.jsx';
 import Forum from './pages/Forum.jsx';
 import Perfil from './pages/Perfil.jsx';
 import Notificacoes from './pages/Notificacoes.jsx';
+import Cadastro from './pages/Cadastro.jsx';
 import Header from './components/Header.jsx'
 import Modal from './components/Modal.jsx'
 import LoginAluno from './pages/alunos/LoginAluno.jsx';
@@ -40,6 +41,9 @@ import PerfilCoordenacao from './pages/coordenacao/PerfilCoordenacao.jsx';
 import NotificacoesAluno from './pages/alunos/NotificacoesAluno.jsx';
 import NotificacoesProfessores from './pages/professores/NotificacoesProfessores.jsx';
 import NotificacoesCoordenacao from './pages/coordenacao/NotificacoesCoordenacao.jsx';
+import CadastroAluno from './pages/alunos/CadastroAluno.jsx';
+import CadastroProfessores from './pages/professores/CadastroProfessores.jsx';
+import CadastroCoordenacao from './pages/coordenacao/CadastroCoordenacao.jsx';
 
 
 const App = () => {
@@ -52,6 +56,7 @@ const App = () => {
         <Route path="/forum" element={<Forum />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/notificacoes" element={<Notificacoes />} />
+        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/header" element={<Header />} />
         <Route path="/modal" element={<Modal />} />
         <Route path="/loginAluno" element={<LoginAluno />} />
@@ -72,6 +77,9 @@ const App = () => {
         <Route path="/notificacoesAluno" element={<NotificacoesAluno />} />
         <Route path="/notificacoesProfessores" element={<NotificacoesProfessores />} />
         <Route path="/notificacoesCoordenacao" element={<NotificacoesCoordenacao />} />
+        <Route path="/cadastroAluno" element={<CadastroAluno />} />
+        <Route path="/cadastroProfessores" element={<CadastroProfessores />} />
+        <Route path="/cadastroCoordenacao" element={<CadastroCoordenacao />} />
       </Routes>
     </Router>
   );

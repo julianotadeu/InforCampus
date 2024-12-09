@@ -518,8 +518,7 @@ const Login = () => {
     };
 
     const handleRegisterClick = () => {
-        setIsRegistering(true);
-        setSelectedRole('Aluno');
+        navigate('/cadastro')
     };
 
     const handleUserTypeChange = (event) => {
@@ -555,7 +554,7 @@ const Login = () => {
                     <button onClick={() => handleRoleSelection('Professor')}>Professor</button>
                     <button onClick={() => handleRoleSelection('Coordenacao')}>Coordenação</button>
                     <p onClick={handleRegisterClick} className="register-link">
-                        Ainda não tem conta? Cadastre-se
+                        Ainda não tem conta? Cadastre-se!
                     </p>
                 </div>
             )}

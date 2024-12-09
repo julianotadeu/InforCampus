@@ -10,7 +10,7 @@ const LoginCoordenacao = () => {
     const navigate = useNavigate();
 
     // Usuário do tipo Professor
-    const user = { email: 'coordenacao@exemplo.com', password: 'Coordenacao123', role: 'Coordenacao' };
+    const user = { email: '', password: '', role: 'Coordenacao' };  //email: 'coordenacao@exemplo.com', password: 'Coordenacao123',
 
     const handleLogin = () => {
         if (email === user.email && password === user.password) {

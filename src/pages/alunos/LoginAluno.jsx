@@ -10,7 +10,7 @@ const LoginAluno = () => {
     const navigate = useNavigate();
 
     // Usuário do tipo Aluno
-    const user = { registroAcademico: '123456789', password: 'Aluno123', role: 'Aluno' };
+    const user = { registroAcademico: '', password: '', role: 'Aluno' };  //registroAcademico: '123.456789', password: 'Aluno123',
 
     const handleLogin = () => {
         if (registroAcademico === user.registroAcademico && password === user.password) {
@@ -38,7 +38,7 @@ const LoginAluno = () => {
                     required
                     value={registroAcademico}
                     onChange={(e) => setRegistroAcademico(e.target.value)}
-                    maxLength={9}
+                    maxLength={10}
                 />
             </div>
             <div className="senha">

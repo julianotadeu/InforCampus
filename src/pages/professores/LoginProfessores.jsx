@@ -10,11 +10,11 @@ const LoginProfessor = () => {
     const navigate = useNavigate();
 
     // Usuário do tipo Professor
-    const user = { email: 'professor@exemplo.com', password: 'Professor123', role: 'Professor' };
+    const user = { email: '', password: '', role: 'Professor' }; //email: 'professor@exemplo.com', password: 'Professor123'
 
     const handleLogin = () => {
         if (email === user.email && password === user.password) {
-            navigate('/homeProfessor'); // Redirecionar após o login
+            navigate('/homeProfessores'); // Redirecionar após o login
         } else {
             setErrorMessage('Usuário ou senha incorretos!');
         }
