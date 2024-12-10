@@ -472,6 +472,7 @@ export default Login;
 
 //Testando autenticação
 
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/pages/Login.css';
@@ -571,7 +572,6 @@ const Login = () => {
                             <option value="Professor/Coordenação">Professor/Coordenação</option>
                         </select>
                     </div>
-                    {/* Formulário de cadastro (semelhante ao que você já fez) */}
                 </form>
             )}
 
@@ -614,6 +614,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
